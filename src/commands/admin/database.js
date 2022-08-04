@@ -7,7 +7,7 @@ module.exports = {
     .setDescription("returns information from the database about a guild"),
   async execute(interaction, client) {
     
-
+    
     // make the command run instead of here inside "GUILDCREATE" event so when it joins a guild it creates it.
 
   },
