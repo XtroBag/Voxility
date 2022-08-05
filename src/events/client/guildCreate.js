@@ -3,7 +3,6 @@ const mongoose = require('mongoose')
 
 module.exports = {
     name: 'guildCreate',
-    once: true,
     async execute(interaction, client) {
       let guildProfile = await Guild.findOne({ guildId: interaction.guild.id })
       if (!guildProfile) guildProfile = await new Guild({
@@ -14,7 +13,7 @@ module.exports = {
       });
 
       await guildProfile.save().catch(console.error)
-      
+      console.log(guildProfile)
       console.log("Bot has joined a guild!")
     }
 }
