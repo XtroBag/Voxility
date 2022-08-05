@@ -4,6 +4,7 @@ color 5
 echo Adding new files if any...
 
 git add *
+git rm --cached .env
 
 echo Finished adding new files!
 
