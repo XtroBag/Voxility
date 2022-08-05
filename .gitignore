@@ -1,2 +1,2 @@
-# Ignore files called 'file.ext'
-.env
+# Ignore files 
+*.env
