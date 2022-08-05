@@ -1,1 +1,2 @@
-git rm --cached .env
+# Ignore files called 'file.ext'
+.env
