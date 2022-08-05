@@ -12,7 +12,7 @@ echo Finished adding new files!
 
 echo Trying to commit...
 
-git commit --all -m "Update"
+git commit --all -m "Voxility Update"
 
 
 if errorlevel 1 echo Failed to commit && pause
@@ -30,6 +30,8 @@ if errorlevel 0 echo Successfully pushed changes to origin!
 
 
 echo Finished updating Repository!
-node ./updateBatServer.js
+
 
 color
+
+pause
