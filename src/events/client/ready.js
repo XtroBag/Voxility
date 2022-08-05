@@ -7,7 +7,7 @@ module.exports = {
     async execute(client) {
         client.user.setPresence({
             activities: [{ name: `discord.js v14`, type: ActivityType.Watching }],
-            status: 'idle',
+            status: 'online',
           });
 
         console.log(chalk.red('[CLIENT]:'), chalk.white("is"), chalk.green("online!"))
