@@ -26,8 +26,8 @@ for (const folder of functionFolder) {
 // testing stuff here
  /* 
 const config = require('../config.json')
- console.log(config["Users:"].Developers) // This will log the developers list
- console.log(config["Users:"].Developers.Xtrobag) // this will log just the users ID
+ console.log(config["Users"].Developers) // This will log the developers list
+ console.log(config["Users"].Developers.Xtrobag) // this will log just the users ID
 
  console.log(config.Category.List.join(" "))
  */
