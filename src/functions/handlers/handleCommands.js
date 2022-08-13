@@ -2,7 +2,6 @@ const fs = require("fs");
 const { Routes } = require("discord-api-types/v9");
 const { REST } = require("@discordjs/rest");
 const chalk = require("chalk");
-var { AsciiTable3, AlignmentEnum } = require("ascii-table3");
 
 module.exports = (client) => {
   client.handleCommands = async () => {

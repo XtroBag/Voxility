@@ -1,9 +1,9 @@
 module.exports = {
     data: {
-      name: "button2",
+      name: "cancelled",
     },
     async execute(interaction, client) {
-      await interaction.reply({ content: "This button has worked!" });
+      await interaction.reply({ content: "You have clicked cancel" });
     },
   };
   

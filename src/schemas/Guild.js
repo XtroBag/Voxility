@@ -7,4 +7,4 @@ const Guild = new mongoose.Schema({
     guildIcon: { type: String, required: true}
 })
 
-module.exports = { User: mongoose.model("Guild", Guild, "guilds") }
+module.exports = { Guild: mongoose.model("Guild", Guild, "guilds") }

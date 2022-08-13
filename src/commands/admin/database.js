@@ -1,4 +1,5 @@
 const { SlashCommandBuilder } = require("discord.js");
+const { codeBlock } = require("@discordjs/builders");
 const { Guild } = require('../../schemas/Guild')
 const mongoose = require('mongoose')
 
@@ -17,9 +18,8 @@ module.exports = {
 
     await guildProfile.save().catch(console.error)
 
-    console.log(guildProfile)
-    
-    // make the command run instead of here inside "GUILDCREATE" event so when it joins a guild it creates it.
+    interaction.reply({ content: codeBlock("js", guildProfile)})
+
 
   },
 };
