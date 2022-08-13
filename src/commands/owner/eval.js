@@ -13,7 +13,7 @@ module.exports = {
         .setDescription('The code you wanna run')
     ),
   async execute(interaction, client) {
-        if (interaction.user.id !== config["Users:"].Developers.Xtrobag) {
+        if (interaction.user.id !== config.Users.Owner.XtroBagID) {
             return interaction.reply({ content: "you cannot use this command!"})
         } else {
             const script = interaction.options.getString('code');

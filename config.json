@@ -1,10 +1,17 @@
 {
     "Users": {
-        "Developers": {
-            "Xtrobag": "929830815699984475",
-            "OtherDev": ""
-        } 
-
+        "Owner": {
+            "XtroBagID": "929830815699984475",
+            "Name": "Xtrobag"
+        },
+        "Developer": {
+            "KayBagID": "897929114697224203",
+            "Name": "KayBag"
+        },
+        "Designers": {
+            "GostieCatID": "965796539039645736",
+            "Name": "GostieCat"
+        }
     },
 
     "Category": {
