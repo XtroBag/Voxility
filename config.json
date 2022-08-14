@@ -8,9 +8,13 @@
             "KayBagID": "897929114697224203",
             "Name": "KayBag"
         },
-        "Designers": {
+        "Designer": {
             "GostieCatID": "965796539039645736",
             "Name": "GostieCat"
+        },
+        "Artist": {
+            "BrodyID": "814354509857292291",
+            "Name": "Brody"
         }
     },
 
