@@ -6,7 +6,7 @@ const emojis = require('../emojis.json')
 const { connect } = require('mongoose')
 
 // the [client] and the Collections
-const client = new Client({ intents: GatewayIntentBits.Guilds });
+const client = new Client({ intents: ["Guilds", "MessageContent", "GuildMessages"] });
 client.commands = new Collection();
 client.buttons = new Collection();
 client.selectMenus = new Collection();
@@ -23,6 +23,7 @@ for (const folder of functionFolder) {
     require(`./functions/${folder}/${file}`)(client);
 }
 
+
 // the command handler calls
 client.handleEvents();
 client.handleCommands();
@@ -30,9 +31,9 @@ client.handleComponents();
 
 (async () => {
   try {
-    await connect(Database)
+      await connect(Database)
   } catch (err) {
-    console.log(err)
+      console.log(err)
   }
 })(); 
 

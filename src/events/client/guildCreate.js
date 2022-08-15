@@ -14,10 +14,6 @@ module.exports = {
       });
 
       await guildProfile.save().catch(console.error)
-
-      console.log(guildProfile)
-      console.log("Bot has joined a guild!")
-
       
     }
 }

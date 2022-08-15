@@ -75,7 +75,7 @@ module.exports = {
             inline: false,
           }
         )
-        .setColor("#36393e")
+        .setColor("#36393F")
         .setFooter({ text: `Created by: ${config.Users.Owner.Name}` })
         .setTimestamp();
 
@@ -101,14 +101,15 @@ module.exports = {
                 let [directory] = interaction.values;
 
                 let aa = new EmbedBuilder()
-                  .setColor("#36393e")
+                    .setColor("#36393F")
                   .setTitle(`All commands of: ${directory}`)
                   .setDescription(
                     `>>> \`\`${
                       commandFiles[directory].join("`` ``") ||
                       "No files in directory"
                     }\`\``
-                  );
+                  )
+
 
                 msg.edit({ embeds: [aa] });
               }

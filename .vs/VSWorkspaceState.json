@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\layouts",
+    "\\src",
+    "\\src\\commands",
+    "\\src\\commands\\general",
+    "\\src\\events",
+    "\\src\\events\\client"
+  ],
+  "SelectedNode": "\\src\\commands\\general\\meme.js",
+  "PreviewInSolutionExplorer": false
+}
