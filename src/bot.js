@@ -37,6 +37,7 @@ client.handleComponents();
   }
 })(); 
 
+
 // the bot emojis handler
 client.Check = emojis.Check
 client.Cross = emojis.Cross
