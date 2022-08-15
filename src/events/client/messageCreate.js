@@ -15,7 +15,9 @@ module.exports = {
                 .then(response => response.json())
                 .then(data => {
                     message.reply(data.message)
-                })     
+                })  
+                
+                
         }
     }
 }
