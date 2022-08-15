@@ -31,7 +31,7 @@ client.handleComponents();
 
 (async () => {
   try {
-      await connect(Database)
+      connect(Database)
   } catch (err) {
       console.log(err) 
   }
