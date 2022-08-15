@@ -3,11 +3,8 @@
     "",
     "\\layouts",
     "\\src",
-    "\\src\\commands",
-    "\\src\\commands\\general",
-    "\\src\\events",
-    "\\src\\events\\client"
+    "\\src\\commands"
   ],
-  "SelectedNode": "\\src\\commands\\general\\meme.js",
+  "SelectedNode": "\\package.json",
   "PreviewInSolutionExplorer": false
 }
