@@ -11,6 +11,9 @@ module.exports = {
         const channel = interaction.options.getChannel('channel').id;
         const profile = await Guild.updateOne({ "guildId": interaction.guild.id }, { $set: { "ChatBotChannel": channel } })
 
+
         interaction.reply({ content: `chatbot channel has been set to: <#${channel}>`})
+
+        
     },
 };

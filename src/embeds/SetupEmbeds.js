@@ -12,3 +12,5 @@ module.exports.beginSetup = new EmbedBuilder()
 module.exports.setup = new EmbedBuilder()
     .setTitle("Setup working")
     .setDescription("`•`› Preparing...\n`•`› Creating ranks")
+ 
+ 

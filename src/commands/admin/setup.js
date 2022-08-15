@@ -40,6 +40,7 @@ module.exports = {
                     )
 
                     interaction.reply({ embeds: [setupWarning], components: [row], fetchReply: true});
+                    
 
             }
             break;

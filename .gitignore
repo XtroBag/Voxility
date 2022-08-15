@@ -1,2 +1,3 @@
 # Ignore files 
 .env
+/nbproject/private/
