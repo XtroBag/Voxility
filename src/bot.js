@@ -45,7 +45,7 @@ client.Owner = emojis.Owner
 client.Developer = emojis.Developer
 client.Designer = emojis.Designer
 client.Artist = emojis.Artist
-client.Invite = emojis.Invite
+
 
 // the bot loggin 
 client.login(Token);
