@@ -14,6 +14,7 @@
     "@discordjs/rest": "^1.0.1",
     "chalk": "^4.1.2",
     "discord-api-types": "^0.36.3",
+    "discord-badges": "^0.0.0",
     "discord.js": "^14.0.3",
     "dotenv": "^16.0.1",
     "hypixel": "^1.0.3",
