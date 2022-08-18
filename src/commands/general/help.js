@@ -5,6 +5,8 @@ const {
   SelectMenuBuilder,
   ButtonBuilder,
   ButtonStyle,
+  CommandInteraction,
+  Client
 } = require("discord.js");
 const config = require("../../../config.json");
 const fs = require("fs");
@@ -13,6 +15,10 @@ module.exports = {
   data: new SlashCommandBuilder()
     .setName("help")
     .setDescription("🔎 Shows Help menu"),
+  /**
+   * @param {Client} client
+   * @param {CommandInteraction} interaction
+   */
   async execute(interaction, client) {
     // The Variables
     const CommandFolders = fs.readdirSync("./src/commands");
@@ -101,15 +107,14 @@ module.exports = {
                 let [directory] = interaction.values;
 
                 let aa = new EmbedBuilder()
-                    .setColor("#36393F")
+                  .setColor("#36393F")
                   .setTitle(`All commands of: ${directory}`)
                   .setDescription(
                     `>>> \`\`${
                       commandFiles[directory].join("`` ``") ||
                       "No files in directory"
                     }\`\``
-                  )
-
+                  );
 
                 msg.edit({ embeds: [aa] });
               }

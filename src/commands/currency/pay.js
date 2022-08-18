@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
+const { SlashCommandBuilder, CommandInteraction, Client, EmbedBuilder } = require("discord.js");
 const { User } = require("../../schemas/Money");
 
 module.exports = {
@@ -6,34 +6,42 @@ module.exports = {
     .setName("pay")
     .setDescription("👤 Pay another user some money")
     .addUserOption((option) =>
-    option.setName("member").setDescription("The user to pay").setRequired(true))
+      option
+        .setName("member")
+        .setDescription("The user to pay")
+        .setRequired(true)
+    )
     .addNumberOption((option) =>
-    option.setName("amount").setDescription("Amount to pay").setRequired(true)
+      option.setName("amount").setDescription("Amount to pay").setRequired(true)
     ),
+  /**
+   * @param {Client} client
+   * @param {CommandInteraction} interaction
+   */
   async execute(interaction, client) {
-    const user = interaction.options.getUser("member") || interaction.member.user;
-    const amount = interaction.options.getNumber('amount')
-
+    const user =
+      interaction.options.getUser("member") || interaction.member.user;
+    const amount = interaction.options.getNumber("amount");
 
     const userData =
-    (await User.findOne({ id: user.id })) ||
-    (await new User({ id: user.id }).save());
-  embed = new EmbedBuilder();
+      (await User.findOne({ id: user.id })) ||
+      (await new User({ id: user.id }).save());
+    embed = new EmbedBuilder();
 
-  if (userData.bank < amount)
-    return interaction.reply({
-      embeds: [
-        embed.setDescription(
-          `💰 You need \` ${
-            amount - userData.bank
-          } 🪙 \` more in your bank account to pay this user money`
-        ),
-      ],
-      ephemeral: true,
-    });
+    if (userData.bank < amount)
+      return interaction.reply({
+        embeds: [
+          embed.setDescription(
+            `💰 You need \` ${
+              amount - userData.bank
+            } 🪙 \` more in your bank account to pay this user money`
+          ),
+        ],
+        ephemeral: true,
+      });
 
-    userData.bank -= amount // money to take away from the person giving
-    userData.bank += amount // money to give other user  // fix this to be giving the user the money (CURRENTLY NOT GIVING IT)
+    userData.bank -= amount; // money to take away from the person giving
+    userData.bank += amount; // money to give other user  // fix this to be giving the user the money (CURRENTLY NOT GIVING IT)
     userData.save();
 
     return interaction.reply({
@@ -43,6 +51,5 @@ module.exports = {
         ),
       ],
     });
-
   },
 };

@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
+const { SlashCommandBuilder, EmbedBuilder, CommandInteraction, Client } = require("discord.js");
 const { User } = require("../../schemas/Money");
 
 module.exports = {
@@ -13,6 +13,10 @@ module.exports = {
           .setRequired(true)
           .setMinValue(100) //should be more than 100 coins
     ),
+  /**
+   * @param {Client} client
+   * @param {CommandInteraction} interaction
+   */
   async execute(interaction, client) {
     const user = interaction.options.getUser("user") || interaction.member.user;
     amount = interaction.options.getNumber("amount");

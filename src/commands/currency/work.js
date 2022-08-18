@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
+const { SlashCommandBuilder, EmbedBuilder, CommandInteraction, ClientPresence } = require("discord.js");
 const { User } = require("../../schemas/Money");
 const prettyMilliseconds = require("pretty-ms");
 
@@ -20,6 +20,10 @@ module.exports = {
   data: new SlashCommandBuilder()
     .setName("work")
     .setDescription("👷🏼 work for some money"),
+  /**
+   * @param {Client} client
+   * @param {CommandInteraction} interaction
+   */
   async execute(interaction, client) {
     const user = interaction.member.user;
     const userData =

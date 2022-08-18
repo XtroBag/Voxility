@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, EmbedBuilder, Embed } = require("discord.js");
+const { SlashCommandBuilder, Client, CommandInteraction, EmbedBuilder } = require("discord.js");
 const { User } = require("../../schemas/Money");
 
 module.exports = {
@@ -10,6 +10,10 @@ module.exports = {
         .setName("user")
         .setDescription("Person you wanna check the balance of.")
     ),
+  /**
+   * @param {Client} client
+   * @param {CommandInteraction} interaction
+   */
   async execute(interaction, client) {
     const user = interaction.options.getUser("user") || interaction.member.user;
     const userData =
