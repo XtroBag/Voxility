@@ -1,8 +1,7 @@
-const { ActivityType } = require('discord.js')
+const { ActivityType } = require('discord.js');
 
 module.exports = (client) => {
     client.pickPresence = async () => {
-
         const options = [
             {
                 type: ActivityType.Playing,

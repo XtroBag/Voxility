@@ -17,5 +17,10 @@
             "Name": "Brody"
         }
         
+    },
+
+    "Settings": {
+        "FollowingStatus": true,
+        "ActivityStatus": false
     }
 }
