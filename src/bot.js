@@ -1,12 +1,13 @@
 require("dotenv").config()
 const { Token, Database } = process.env;
-const { Client, Collection, GatewayIntentBits } = require("discord.js");
+const { Client, Collection, GatewayIntentBits, Guild, ActivityType } = require("discord.js");
 const fs = require("fs");
 const emojis = require('../emojis.json')
-const { connect } = require('mongoose')
+const { connect } = require('mongoose');
+const config = require("../config.json");
 
 // the [client] and the Collections
-const client = new Client({ intents: ["Guilds", "MessageContent", "GuildMessages"] });
+const client = new Client({ intents: ["Guilds", "MessageContent", "GuildMessages", "GuildPresences"] });
 client.commands = new Collection();
 client.buttons = new Collection();
 client.selectMenus = new Collection();
@@ -29,12 +30,14 @@ client.handleEvents();
 client.handleCommands();
 client.handleComponents();
 
+
 (async () => {
   try {
       connect(Database)
   } catch (err) {
       console.log(err) 
   }
+
 })(); 
 
 

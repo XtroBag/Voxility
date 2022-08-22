@@ -1,5 +1,6 @@
 const { SlashCommandBuilder, Client, CommandInteraction } = require("discord.js");
 
+
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("github")
@@ -10,7 +11,6 @@ module.exports = {
      */
   async execute(interaction, client) {
     
-    
-    
+      
   },
 };
