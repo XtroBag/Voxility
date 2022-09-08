@@ -19,8 +19,7 @@ module.exports = {
    * @param {CommandInteraction} interaction
    */
   async execute(interaction, client) {
-    const user =
-      interaction.options.getUser("member") || interaction.member.user;
+    const user = interaction.options.getUser("member") || interaction.member.user;
     const amount = interaction.options.getNumber("amount");
 
     const userData =

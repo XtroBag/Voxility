@@ -1,4 +1,3 @@
-const { Client, ActivityType } = require('discord.js')
 const chalk = require('chalk')
 const config = require('../../../config.json');
 
@@ -10,7 +9,8 @@ module.exports = {
         setInterval(client.pickPresence, 10 * 1000);
         } else {
             return;
-        }
+        } 
         console.log(chalk.red('[CLIENT]:'), chalk.white("is"), chalk.green("online!"))
+
     }
 }

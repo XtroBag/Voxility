@@ -5,7 +5,8 @@ const Guild = new mongoose.Schema({
     guildId: String,
     guildName: String,
     guildIcon: { type: String, required: true },
-    ChatBotChannel: { type: String, default: "Channel Not Set" }
+    ChatBotChannel: { type: String, default: "Channel Not Set" },
+    ModLogChannel: { type: String, default: "0000000000000000000" }
 })
 
 module.exports = { Guild: mongoose.model("Guild", Guild, "guilds") }

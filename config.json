@@ -20,7 +20,7 @@
     },
 
     "Settings": {
-        "FollowingStatus": true,
-        "ActivityStatus": false
+        "FollowingStatus": false,
+        "ActivityStatus": true
     }
 }

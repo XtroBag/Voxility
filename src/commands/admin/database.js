@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const { SlashCommandBuilder, Client, CommandInteraction } = require("discord.js");
 const { codeBlock } = require("@discordjs/builders");
 const { Guild } = require("../../schemas/Guild");

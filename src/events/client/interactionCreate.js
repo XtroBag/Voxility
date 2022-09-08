@@ -12,11 +12,13 @@ module.exports = {
       try {
         await command.execute(interaction, client);
       } catch (error) {
-        console.error(error);
-        await interaction.reply({
-          content: "Something went wrong while executing this command.",
-          ephemeral: true,
-        });
+        console.log(error)
+        if (interaction.deferred) {
+          await interaction.editReply({ content: 'there was an error running this interaction'});
+        } else if (!interaction.replied) {
+          await interaction.editReply({ content: 'interaction failed', ephemeral: true });
+        }
+ 
       }
     } else if (interaction.isButton()) {
       const { buttons } = client;
